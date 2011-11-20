@@ -1,8 +1,4 @@
-import base64
 import random
-import re
-
-from types import StringType
 
 from Crypto.Cipher import AES
 from PIL import Image
@@ -24,7 +20,6 @@ class Lexicrypt():
     def __init__(self):
         self.char_array = []
 
-
     def encrypt_message(self, message):
         """
         Encrypt a block of text.
@@ -33,7 +28,6 @@ class Lexicrypt():
         cipher_text = AES.encrypt(self._pad_message(message))
         image = self._generate_image(cipher_text)
         return image
-
 
     def decrypt_message(self, image_path):
         """
@@ -51,7 +45,6 @@ class Lexicrypt():
         cipher_text = AES.decrypt(message).strip()
         return cipher_text
 
-
     def _pad_message(self, message):
         """
         Verify that the message is
@@ -68,7 +61,6 @@ class Lexicrypt():
                     current_count += 1
         return message
 
-
     def _generate_image(self, cipher_text):
         """
         Assign each character with a specific
@@ -78,7 +70,6 @@ class Lexicrypt():
         image = Image.new('RGBA', (IMAGE_WIDTH, cipher_length))
 
         putpixel = image.im.putpixel
-        # assign a character to an rgb value
         for idx, c in enumerate(cipher_text):
             try:
                 c_idx = [v[0] for v in self.char_array].index(c)
@@ -89,7 +80,6 @@ class Lexicrypt():
             for i in range(IMAGE_WIDTH):
                 putpixel((i, idx), rgb)
         image.save('static/encrypted/test.png')
-
 
     def _generate_rgb(self, c):
         """
@@ -102,7 +92,7 @@ class Lexicrypt():
                random.randint(0, 255),
                random.randint(0, 255))
         try:
-            c_idx = [v[1] for v in self.char_array].index(c)
+            [v[1] for v in self.char_array].index(c)
             # call this function again until we are happy
             self._generate_rgb()
         except ValueError:
