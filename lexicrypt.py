@@ -2,11 +2,10 @@ import base64
 import random
 import re
 
-from PIL import Image
-
 from types import StringType
 
 from Crypto.Cipher import AES
+from PIL import Image
 
 import settings
 
