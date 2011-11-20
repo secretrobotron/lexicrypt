@@ -1,0 +1,20 @@
+{% extends "shared/layout.html" %}
+
+{% block title %}
+  lexicrypt
+{% endblock %}
+
+{% block content %}
+  <section class="{{ page }}">
+    <h1>Example</h1>
+
+    <h2>Original Message</h2>
+    <p><span class="quote">“</span>{{ message }}<span class="quote">”</span></p>
+
+    <h2>Encrypted Image</h2>
+    <p><img src="/static/encrypted/test.png" /></p>
+
+    <h2>Decrypted Message from Image</h2>
+    <p><span class="quote">“</span>{{ dmessage }}<span class="quote">”</span></p>
+  </section>
+{% endblock %}
