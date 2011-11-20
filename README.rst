@@ -18,7 +18,7 @@ sudo pip install -r requirements.txt
 Screenshot
 ==========
 
-.. image:: https://img.skitch.com/20111120-bx4m4tpu9dpemdadyr4a8ppake.jpg
+.. image:: https://img.skitch.com/20111120-fskaf7xhdu6rrs7c1jwkhasf77.jpg
 
 
 Todo
