@@ -49,7 +49,7 @@ class Lexicrypt():
             c = image.getpixel((0, y))
             c_idx = [v[1] for v in self.char_array].index(c)
             message += self.char_array[c_idx][0]
-        cipher_text = AES.decrypt(message)
+        cipher_text = AES.decrypt(message.strip())
         return cipher_text
 
 
