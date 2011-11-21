@@ -25,7 +25,7 @@ Todo
 ====
 
 * Save self.char_array to a database, such that: author[char_array[api_key_1, api_key_2, api_key_n]]
-* If a visitor's public key matches one in the char_array's list, provide a
+* If a visitor's api key matches one in the char_array's list, provide a
   browser notification that this image can be decrypted
 * Allow them to decrypt by providing a link to the image
 
