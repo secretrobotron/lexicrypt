@@ -6,7 +6,7 @@ lexicrypt
 What it is
 ==========
 
-Encrypt and decrypt text through images.
+Encrypt and decrypt text using AES and represent as images.
 
 
 Installation
@@ -24,7 +24,14 @@ Screenshot
 Todo
 ====
 
-* Save self.char_array to a database, such that: author[char_array[public_key_1, public_key_2, public_key_n]]
+* Save self.char_array to a database, such that: author[char_array[api_key_1, api_key_2, api_key_n]]
 * If a visitor's public key matches one in the char_array's list, provide a
   browser notification that this image can be decrypted
 * Allow them to decrypt by providing a link to the image
+
+
+Additional Notes
+================
+
+* Api keys are tied to a user's email address
+* Each user has an generated AES secret for their data. If this key is reset, all previous images will be regenerated
